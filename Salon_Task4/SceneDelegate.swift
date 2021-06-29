@@ -5,7 +5,7 @@
 //  Created by 相良 詠斗 on 2021/06/29.
 //
 
-import UIKitcd
+import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
