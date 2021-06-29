@@ -8,7 +8,6 @@
 import Foundation
 
 class CounterModel {
-    
     static let notificationName = "CounterModel"
     let notificationCenter = NotificationCenter()
     var count: Int = 0 {
@@ -19,7 +18,7 @@ class CounterModel {
             )
         }
     }
-    //値の更新処理
-    func countPlus(){ count += 1 }
-    func countClear(){ count = 0 }
+    // 値の更新処理
+    func countPlus() { count += 1 }
+    func countClear() { count = 0 }
 }
