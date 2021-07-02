@@ -10,7 +10,7 @@ import Foundation
 class CounterModel {
     static let notificationName = "CounterModel"
     let notificationCenter = NotificationCenter()
-    var count: Int = 0 {
+    private var count = 0 {
         didSet {
             notificationCenter.post(
                 name: .init(rawValue: CounterModel.notificationName),

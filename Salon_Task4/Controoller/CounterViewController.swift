@@ -9,9 +9,10 @@ import UIKit
 
 class CounterViewController: UIViewController {
 
-    private var counterModel = CounterModel()
+    private let counterModel = CounterModel()
 
-    @IBOutlet var counterView: CounterView!
+    @IBOutlet private var countLabel: UILabel!
+
     @IBAction func plusButtonAction(_ sender: Any) {
         counterModel.countPlus()
     }
@@ -22,16 +23,18 @@ class CounterViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
         counterModel.notificationCenter.addObserver(
             self,
             selector: #selector(self.handleCountChange(_:)),
             name: .init(NSNotification.Name(rawValue: CounterModel.notificationName)), object: nil
-            )
+        )
     }
-    @objc func handleCountChange(_ notification: Notification) {
+
+    @objc private func handleCountChange(_ notification: Notification) {
         if let count = notification.object as? Int {
             // Viewに描画処理を依頼する
-            counterView.render(count: count)
+            countLabel.text = String(count)
         }
     }
 }
