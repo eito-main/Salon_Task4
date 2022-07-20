@@ -12,7 +12,7 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="CounterViewController" customModule="Salon_Task4" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="CounterView" customModule="Salon_Task4" customModuleProvider="target">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -59,12 +59,9 @@
                             <constraint firstItem="QEl-eS-Bu4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="bEY-3v-G9q"/>
                             <constraint firstItem="OGH-Be-Yze" firstAttribute="top" secondItem="uHx-zb-UQM" secondAttribute="bottom" id="hj9-7H-DdM"/>
                         </constraints>
-                        <connections>
-                            <outlet property="countLabel" destination="QEl-eS-Bu4" id="AM9-vw-JEf"/>
-                        </connections>
                     </view>
                     <connections>
-                        <outlet property="counterView" destination="8bC-Xf-vdC" id="Rrj-9z-cWN"/>
+                        <outlet property="countLabel" destination="QEl-eS-Bu4" id="wWv-eh-egB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
